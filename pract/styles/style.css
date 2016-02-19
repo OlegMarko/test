@@ -1,0 +1,73 @@
+html{
+    height: 100%;
+}
+
+h2, p, td, li {
+    color: #fff;
+}
+
+body {
+    background: url(background.jpg) repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#page {
+    height: 100%;
+    margin: 0 auto;
+    width: 65%;
+}
+
+#header {
+    background-color: #952;
+    border-radius: 0 0 15px 15px;
+    left: 0;
+    min-height: 85px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+#header h1 {
+    text-align: center;
+}
+
+#content {
+    margin: 0 auto 50px;
+    min-height: 100%;
+    padding-top: 50px;
+    width: 65%;
+}
+
+.error {
+    color: #f00;
+}
+
+#footer {
+    background-color: #399;
+    border-radius: 15px 15px 0 0;
+    bottom: 0;
+    height: 5%;
+    left: 0;
+    min-height: 45px;
+    position: fixed;
+    width: 100%;
+}
+
+#footer p {
+    text-align: center;
+}
+
+.captcha {
+    border:0;
+    color: #f39;
+    height:20px;
+    margin-top: 5px;
+    text-align: center;
+    width:50px;
+}
+
+.clear{
+    clear: both;
+}
