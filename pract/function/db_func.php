@@ -135,11 +135,11 @@
         
         $connection = db_connect();
                 
-        $query = "UPDATE `db_pract`.`convert_category` SET `category` = '$category' WHERE `convert_category`.`id` = $id;";
+        $query = "UPDATE `db_pract`.`convert_category` SET `category` = $category WHERE `convert_category`.`id` = $id;";
         $query = mysqli_query($connection, $query); 
     }
     
-    function update_deminsion($id, $number) {
+    function update_demension($id, $number) {
         
         $connection = db_connect();
                 

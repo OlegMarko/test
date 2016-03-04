@@ -5,7 +5,7 @@
     
     session_start();
     
-    if (!empty($_POST['category']) && !isset($_POST['get_result'])) {
+    if (!empty($_POST['category']) && !isset($_POST['get_result']) && !isset($_POST['update_category']) && !isset($_POST['update_dimension']) && !isset($_POST['add_dimension']) && !isset($_POST['add_category'])) {
         $res = get_deminsion_ID();
         exit($res);
     }
@@ -73,7 +73,7 @@
             
             if(isset($_POST['update_category'])  && !empty($_POST['select_category']) && !empty($_POST['category']) ) {
                 $id = $_POST['select_category'];
-                $data = $_POST['category'];
+                $data = "'".$_POST['category']."'";
                 update_category($id, $data);
                 header('Location: index.php?page=' . $page);
             } else {
@@ -82,8 +82,8 @@
             
             if(isset($_POST['update_dimension'])  && !empty($_POST['size']) && !empty($_POST['demension_insert']) ) {
                 $id = $_POST['demension_insert'];
-                $data = $_POST['size'];
-                update_deminsion($id, $data);
+                $data = "'".$_POST['size']."'";
+                update_demension($id, $data);
                 header('Location: index.php?page=' . $page);
             } else {
                 $info = "Не всі поля заповнені! Заповніт всі поля!!!";
