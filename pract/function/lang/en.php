@@ -17,7 +17,10 @@
             'number' => 'Number',
             'name' => 'Name',
             'surname' => 'Surname',
-            'tel' => 'Tel'
+            'tel' => 'Tel',
+            'insert_dimension' => 'Insert deminsion',
+            'insert_relations' => 'Insert category',
+            'insert' => 'Insert'
         );
 
         $str = $lang[$str];

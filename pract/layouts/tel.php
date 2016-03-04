@@ -44,10 +44,10 @@
         ?>
             <table>
                 <tr>
-                    <td width="20%">
+                    <td width="150px">
                         <?=lang('name');?>
                     </td>
-                    <td width="30%">
+                    <td width="200px">
                         <?=lang('surname');?>
                     </td>
                     <td width="250px">
@@ -64,10 +64,10 @@
         <li>
             <table>
                 <tr>
-                    <td width="20%">
+                    <td width="150px">
                         <?=$item['name'];?>
                     </td>
-                    <td width="30%">
+                    <td width="200px">
                         <?=$item['surname'];?>
                     </td>
                     <td width="250px">

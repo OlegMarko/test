@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Фев 23 2016 г., 11:43
+-- Время создания: Фев 09 2016 г., 20:44
 -- Версия сервера: 5.6.17
 -- Версия PHP: 5.5.12
 
@@ -175,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `tel_table` (
   `tel` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `tel` (`tel`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

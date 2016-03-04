@@ -120,22 +120,3 @@
         </div>
     </form>
 </div>
-
-
-<script type="text/javascript">
-   $(function() {
-        $('a[rel=lightbox]').lightBox();
-    });
-</script>
-
-<table class="album" cellpadding="0" cellspacing="0" border="0" align="center">
-        <tr>
-            <td valign="top">
-                <?php foreach ($image as $item):?>
-                <a href="data/<?=$item['name'];?>" rel="lightbox" >
-                    <img src="data/<?=$item['name'];?>" />
-                </a>
-                <?php endforeach;?>
-            </td>
-        </tr>
-</table>

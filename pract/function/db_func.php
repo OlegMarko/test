@@ -49,6 +49,19 @@
         return $result;
     }
     
+    function get_category_where($where) {
+        /* Вибірка категорій з бази даних */
+        
+        $connection = db_connect();
+        
+        $query = " SELECT * FROM convert_category WHERE id = $where ORDER BY convert_category.id DESC ";
+        
+        $result = mysqli_query($connection, $query);
+        $result = db_result_to_array($result);
+        
+        return $result;
+    }
+    
     function add_relation($data) {
         /* Додавання нового відношення */
         
@@ -67,6 +80,23 @@
         
         $result = mysqli_query($connection, $query);
         $result = db_result_to_array($result);
+        
+        return $result;
+    }
+    
+    function get_relationsID($id) {
+        /* Вибірка відношень з бази даних */
+        
+        $connection = db_connect();
+        
+        $query = " SELECT * FROM convert_relations WHERE id = $id ";
+        
+        $res = mysqli_query($connection, $query);
+        $res = db_result_to_array($res);
+        
+        foreach($res as $item):
+            $result = $item['name'];
+        endforeach;
         
         return $result;
     }
@@ -99,6 +129,22 @@
         endforeach;
         
         return $result;
+    }
+    
+    function update_category($id, $category) {
+        
+        $connection = db_connect();
+                
+        $query = "UPDATE `db_pract`.`convert_category` SET `category` = '$category' WHERE `convert_category`.`id` = $id;";
+        $query = mysqli_query($connection, $query); 
+    }
+    
+    function update_deminsion($id, $number) {
+        
+        $connection = db_connect();
+                
+        $query = "UPDATE `db_pract`.`convert_relations` SET `Ci` = $number WHERE `convert_relations`.`id` = $id;";
+        $query = mysqli_query($connection, $query); 
     }
         
     function add_tel($data) {
@@ -258,5 +304,19 @@
         return $captcha;
     }
 
+    function get_deminsion_ID() {
+        $connection = db_connect();
+        
+        $category = (int)$_POST['category'];
+        $query = "SELECT * FROM convert_relations WHERE category = $category";
+        $res = mysqli_query($connection, $query);
+        
+        $return = "<option value='0'>Виберіть розмірність</option>";
+        while ($row = mysqli_fetch_assoc($res)) {
+            $return .= "<option value='{$row['id']}'>{$row['name']}</option>";
+        }
+        
+        return $return;
+    }
 
 ?>

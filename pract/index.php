@@ -5,6 +5,11 @@
     
     session_start();
     
+    if (!empty($_POST['category']) && !isset($_POST['get_result'])) {
+        $res = get_deminsion_ID();
+        exit($res);
+    }
+    
     if (empty($_GET['page'])) {
         $page = 'index';
     } else {
@@ -45,6 +50,7 @@
         break;
         
         case "convert":
+            
             if(isset($_POST['add_category'])  && !empty($_POST['category'])) {
                 $data['category'] = "'" . $_POST['category'] . "'";
                 $data = implode(',', $data);
@@ -65,12 +71,30 @@
                 $info = "Не всі поля заповнені! Заповніт всі поля!!!";
             }
             
-            if(isset($_POST['get_result'])  && !empty($_POST['number']) && !empty($_POST['select_relations']) && !empty($_POST['select_relations_convert'])) {
+            if(isset($_POST['update_category'])  && !empty($_POST['select_category']) && !empty($_POST['category']) ) {
+                $id = $_POST['select_category'];
+                $data = $_POST['category'];
+                update_category($id, $data);
+                header('Location: index.php?page=' . $page);
+            } else {
+                $info = "Не всі поля заповнені! Заповніт всі поля!!!";
+            }
+            
+            if(isset($_POST['update_dimension'])  && !empty($_POST['size']) && !empty($_POST['demension_insert']) ) {
+                $id = $_POST['demension_insert'];
+                $data = $_POST['size'];
+                update_deminsion($id, $data);
+                header('Location: index.php?page=' . $page);
+            } else {
+                $info = "Не всі поля заповнені! Заповніт всі поля!!!";
+            }
+            
+            if(isset($_POST['get_result'])  && !empty($_POST['number']) && !empty($_POST['demension']) && !empty($_POST['demension_in'])) {
                 $number = $_POST['number'];
-                $out = $_POST['select_relations'];
-                $in = $_POST['select_relations_convert'];
+                $out = $_POST['demension'];
+                $in = $_POST['demension_in'];
                 if ($out != $in) {
-                    $result = convert($number, $out, $in);
+                    $result = "$number " . get_relationsID($out) . " = " . convert($number, $out, $in) . " " . get_relationsID($in);
                     $info = "";
                 } else {
                     $info = "";
@@ -79,6 +103,7 @@
                 $result = "";
                 $info = "";
             }
+            
         break;
         
         case "tel":
@@ -92,7 +117,7 @@
             }
             
             if (isset($_POST['search_name']) && !empty($_POST['search'])) {
-                $data=  $_POST['search'];
+                $data= "'" . $_POST['search'] . "'";
             }
             if (isset($_POST['search_surname']) && !empty($_POST['search2'])) {
                 $data= "'" . $_POST['search2'] . "'";

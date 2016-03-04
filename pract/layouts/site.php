@@ -8,15 +8,9 @@
         <link rel="stylesheet" href="styles/index.css" type="text/css" />
         <link rel="stylesheet" href="styles/tel.css" type="text/css" />
         <link rel="stylesheet" href="styles/album.css" type="text/css" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         
-        <script src="function/jquery-2.2.0.min.js"></script>
-        <script src="function/jquery.nivo.slider.js"></script>
-        <script src="function/jquery.lightbox-0.5.js"></script>
-        <script src="//vk.com/js/api/xd_connection.js?20" type="text/javascript"></script>
-        <script type="text/javascript">
-            
-        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="function/select.js"></script>
         
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="keywords" />
