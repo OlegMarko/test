@@ -11,12 +11,8 @@
                     <input type="text" name="category" />
                 </td>
             </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" name="add_category" value="<?=lang('add_new_category');?>" />
-                </td>
-            </tr>
         </table>
+        <input type="submit" name="add_category" value="<?=lang('add_new_category');?>" />
     </form>
  </div>
  
@@ -182,30 +178,48 @@
 <div class="category">
     <h2><?=lang('convert');?></h2>
     <form action="" method="post">
-        <?=lang('number');?>
-        <input type="number" name="number" />
-        <div>
-            <select name="category" id="category">
-                <option value="0">Виберіть категорію</option>
-                <?php
-                    $category = get_category();
-                    foreach($category as $item): 
-                ?>
+        <table>
+            <tr>
+                <td width="250px">
+                    <?=lang('number');?>
+                </td>
+                <td>
+                    <input type="number" name="number" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div>
+                        <select name="category" id="category">
+                            <option value="0">Виберіть категорію</option>
+                            <?php
+                                $category = get_category();
+                                foreach($category as $item): 
+                            ?>
 
-                <option value="<?=$item['id'];?>"><?=$item['category'];?></option>
+                            <option value="<?=$item['id'];?>"><?=$item['category'];?></option>
 
-                <?php
-                    endforeach;
-                ?>
-            </select>
-        </div>
-        <div id="divdemension">
-            <select disabled="" name="demension" id="demension"></select>
-        </div>
-        <?=lang('convert_in');?>
-        <div id="divdemension_in">
-            <select disabled="" name="demension_in" id="demension_in"></select>
-        </div>
+                            <?php
+                                endforeach;
+                            ?>
+                        </select>
+                    </div>
+                    <div id="divdemension">
+                        <select disabled="" name="demension" id="demension"></select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?=lang('convert_in');?>
+                </td>
+                <td>
+                    <div id="divdemension_in">
+                        <select disabled="" name="demension_in" id="demension_in"></select>
+                    </div>
+                </td>
+            </tr>
+        </table>
         <input type="submit" value="<?=lang('get_result');?>" name="get_result" />
     </form>
     <?php 

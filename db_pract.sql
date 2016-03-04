@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Фев 23 2016 г., 11:43
+-- Время создания: Мар 04 2016 г., 23:03
 -- Версия сервера: 5.6.17
 -- Версия PHP: 5.5.12
 
@@ -40,7 +40,7 @@ INSERT INTO `convert_category` (`id`, `category`) VALUES
 (1, 'Маса'),
 (3, 'Температура'),
 (4, 'Час'),
-(5, '1111111111');
+(5, 'Змінити');
 
 -- --------------------------------------------------------
 
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `convert_relations` (
   `category` int(10) unsigned NOT NULL,
   `Ci` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `convert_relations`
@@ -66,7 +66,8 @@ INSERT INTO `convert_relations` (`id`, `name`, `category`, `Ci`) VALUES
 (5, 'Година', 4, 3600),
 (6, 'Кілограм', 1, 1),
 (7, 'Грам', 1, 0.001),
-(8, 'Градус Цельсія', 3, 1);
+(8, 'Градус Цельсія', 3, 1),
+(9, 'Грн', 5, 25.25);
 
 -- --------------------------------------------------------
 
@@ -175,7 +176,15 @@ CREATE TABLE IF NOT EXISTS `tel_table` (
   `tel` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `tel` (`tel`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп данных таблицы `tel_table`
+--
+
+INSERT INTO `tel_table` (`id`, `name`, `surname`, `tel`) VALUES
+(1, '1', '1', 1),
+(2, 'name', 'surname', 5545454);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
