@@ -96,6 +96,11 @@
                 if ($out != $in) {
                     $result = "$number " . get_relationsID($out) . " = " . convert($number, $out, $in) . " " . get_relationsID($in);
                     $info = "";
+                    
+                    $f = fopen('log.txt', 'w+');
+                    fwrite($f, $result);
+                    fclose($f);
+                    
                 } else {
                     $info = "";
                 }

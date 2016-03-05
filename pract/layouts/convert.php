@@ -108,7 +108,7 @@
                     Відношення даної величини до СІ (міжнародної системи вимірювання фізичних величин):
                 </td>
                 <td>
-                    <input type="number" name="size" />
+                    <input type="text" name="size" />
                 </td>
             </tr>
         </table>

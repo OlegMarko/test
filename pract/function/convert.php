@@ -10,7 +10,7 @@
         return $result;
     }
     
-    function convertT($number, $out, $in) {
+    function convertV($number, $out, $in) {
         /* Правило конвертації температури */
         
         $out = get_number_CI($out);

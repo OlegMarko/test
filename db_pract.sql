@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 04 2016 г., 23:03
+-- Время создания: Мар 05 2016 г., 08:50
 -- Версия сервера: 5.6.17
 -- Версия PHP: 5.5.12
 
@@ -40,7 +40,7 @@ INSERT INTO `convert_category` (`id`, `category`) VALUES
 (1, 'Маса'),
 (3, 'Температура'),
 (4, 'Час'),
-(5, 'Змінити');
+(5, 'Валюта');
 
 -- --------------------------------------------------------
 
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `convert_relations` (
   `category` int(10) unsigned NOT NULL,
   `Ci` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Дамп данных таблицы `convert_relations`
@@ -67,7 +67,8 @@ INSERT INTO `convert_relations` (`id`, `name`, `category`, `Ci`) VALUES
 (6, 'Кілограм', 1, 1),
 (7, 'Грам', 1, 0.001),
 (8, 'Градус Цельсія', 3, 1),
-(9, 'Грн', 5, 25.25);
+(9, 'Грн', 5, 0.06),
+(11, 'usd', 5, 1);
 
 -- --------------------------------------------------------
 
