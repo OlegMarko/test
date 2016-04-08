@@ -8,7 +8,7 @@
                     <?=lang('category');?>: 
                 </td>
                 <td>
-                    <input type="text" name="category" />
+                    <input type="text" name="category" placeholder="<?=lang('new_category');?>" required pattern="[A-Za-zА-Яа-я]+" />
                 </td>
             </tr>
         </table>
@@ -45,7 +45,7 @@
                     <?=lang('dimension');?>:
                 </td>
                 <td>
-                    <input type="text" name="dimension" />
+                    <input type="text" name="dimension" placeholder="<?=lang('new_dimension');?>" pattern="[A-Za-zА-Яа-я]+" required />
                 </td>
             </tr>
             <tr>
@@ -53,7 +53,7 @@
                     Відношення даної величини до СІ (міжнародної системи вимірювання фізичних величин):
                 </td>
                 <td>
-                    <input type="number" name="size" />
+                    <input type="text" name="size" placeholder="<?=lang('size');?>" pattern="\d+(.\d{1,10})?" required />
                 </td>
             </tr>
         </table>
@@ -108,7 +108,7 @@
                     Відношення даної величини до СІ (міжнародної системи вимірювання фізичних величин):
                 </td>
                 <td>
-                    <input type="text" name="size" />
+                    <input type="text" name="size" placeholder="<?=lang('size');?>" pattern="\d+(.\d{1,10})?" required />
                 </td>
             </tr>
         </table>
@@ -156,7 +156,7 @@
                     Нова назва:
                 </td>
                 <td>
-                    <input type="text" name="category" />
+                    <input type="text" name="category" placeholder="<?=lang('new_category');?>" pattern="[A-Za-zА-Яа-я]+" required />
                 </td>
             </tr>
         </table>
@@ -184,7 +184,7 @@
                     <?=lang('number');?>
                 </td>
                 <td>
-                    <input type="number" name="number" />
+                    <input type="text" name="number" placeholder="<?=lang('number');?>" pattern="\d+(.\d{1,10})?" required />
                 </td>
             </tr>
             <tr>
@@ -225,4 +225,18 @@
     <?php 
         echo $result;
     ?>
+    <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+    </pre>
 </div>
