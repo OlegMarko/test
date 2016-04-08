@@ -38,26 +38,26 @@
         <table>
             <tr>
                 <td width="120px">
-                    Ім'я:
+                    <?=lang('name');?>:
                 </td>
                 <td>
-                    <input type="text" name="name" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Логін:
-                </td>
-                <td>
-                    <input type="text" name="login" />
+                    <input type="text" name="name" placeholder="<?=lang('name');?>" pattern="[A-Za-zА-Яа-я]+" required />
                 </td>
             </tr>
             <tr>
                 <td>
-                    Пароль:
+                    <?=lang('login');?>:
                 </td>
                 <td>
-                    <input type="password" name="password" />
+                    <input type="text" name="login" placeholder="<?=lang('login');?>" pattern="[A-Za-zА-Яа-я0-9]+" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <?=lang('password');?>:
+                </td>
+                <td>
+                    <input type="password" name="password" placeholder="<?=lang('password');?>" pattern="[A-Za-zА-Яа-я0-9-_]+" required />
                 </td>
             </tr>
             <tr>
@@ -73,7 +73,7 @@
                     Код з картинки:
                 </td>
                 <td>
-                    <input type="text" name="captcha2" size="5" maxlength="5" /><br />
+                    <input type="text" name="captcha2" size="5" maxlength="5" pattern="[0-9]+" required /><br />
                 </td>
             </tr>
             <tr>
@@ -95,18 +95,18 @@
         <table>
             <tr>
                 <td>
-                    Логін:
+                    <?=lang('login');?>:
                 </td>
                 <td>
-                    <input type="text" name="login" />
+                    <input type="text" name="login" placeholder="<?=lang('login');?>" pattern="[A-Za-zА-Яа-я0-9]+" required />
                 </td>
             </tr>
             <tr>
                 <td>
-                    Пароль:
+                    <?=lang('password');?>:
                 </td>
                 <td>
-                    <input type="password" name="password" />
+                    <input type="password" name="password" placeholder="<?=lang('password');?>" pattern="[A-Za-zА-Яа-я0-9-_]+" required />
                 </td>
             </tr>
             <tr>

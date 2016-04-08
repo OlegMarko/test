@@ -97,12 +97,13 @@
                     $result = "$number " . get_relationsID($out) . " = " . convert($number, $out, $in) . " " . get_relationsID($in);
                     $info = "";
                     
-                    $f = fopen('log.txt', 'w+');
-                    fwrite($f, $result);
+                    $f = fopen('log.txt', 'a+');
+                    fwrite($f, $result ."  " . " Date this convert " . date("l dS of F Y h:I:s A") . "\n");
                     fclose($f);
                     
                 } else {
                     $info = "";
+                    $result = "";
                 }
             } else {
                 $result = "";
@@ -193,5 +194,5 @@
     }
     
     
-    include($_SERVER['DOCUMENT_ROOT'].'/pract/layouts/site.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/pract/model/site.php');
 ?>

@@ -16,11 +16,19 @@
             'get_result' => 'Get result',
             'number' => 'Number',
             'name' => 'Name',
+            'login' => 'Login',
+            'password' => 'Password',
+            'search' => 'Search',
             'surname' => 'Surname',
             'tel' => 'Tel',
             'insert_dimension' => 'Insert deminsion',
             'insert_relations' => 'Insert category',
-            'insert' => 'Insert'
+            'insert' => 'Insert',
+            'new_category' => 'Newcategory',
+            'new_dimension' => 'New dimension',
+            'size' => 'relation',
+            'del' => 'Delete',
+            'number_list' => 'Number list'
         );
 
         $str = $lang[$str];

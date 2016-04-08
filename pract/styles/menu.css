@@ -28,3 +28,11 @@
     border: 4px solid #f00;
 }
 
+#menu .conv, .conv a {
+    visibility: hidden;
+}
+
+#menu .conv_hover, .conv_hover a {
+    visibility: visible;
+}
+

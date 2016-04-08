@@ -7,7 +7,7 @@
                     <?=lang('name');?>
                 </td>
                 <td>
-                    <input type="text" name="name" />
+                    <input type="text" name="name" placeholder="<?=lang('name');?>" pattern="[A-Za-zА-Яа-я]+" required />
                 </td>
             </tr>
             <tr>
@@ -15,7 +15,7 @@
                     <?=lang('surname');?>
                 </td>
                 <td>
-                    <input type="text" name="surname" />
+                    <input type="text" name="surname" placeholder="<?=lang('surname');?>" pattern="[A-Za-zА-Яа-я]+" required />
                 </td>
             </tr>
             <tr>
@@ -23,7 +23,7 @@
                     <?=lang('tel');?>
                 </td>
                 <td>
-                    <input type="tel" name="tel" />
+                    <input type="tel" name="tel" placeholder="<?=lang('tel');?>" pattern="[0-9]+" required />
                 </td>
             </tr>
             <tr>
@@ -85,7 +85,7 @@
 </div>
 
 <div class="tel">
-    <h2>Пошук</h2>
+    <h2><?=lang('search');?></h2>
     <form action="" method="post">
         <table>
             <tr>
@@ -93,7 +93,7 @@
                     <?=lang('name');?>
                 </td>
                 <td>
-                    <input type="search" name="search" />
+                    <input type="search" name="search" placeholder="<?=lang('name');?>" pattern="[A-Za-zА-Яа-я]+" required />
                 </td>
                 <td>
                     <input type="submit" name="search_name" value="Пошук" />
@@ -108,7 +108,7 @@
                     <?=lang('surname');?>
                 </td>
                 <td>
-                    <input type="search" name="search2" />
+                    <input type="search" name="search2" placeholder="<?=lang('surname');?>" pattern="[A-Za-zА-Яа-я]+" required />
                 </td>
                 <td>
                     <input type="submit" name="search_surname" value="Пошук" />
@@ -123,7 +123,7 @@
                     <?=lang('tel');?>
                 </td>
                 <td>
-                    <input type="search" name="search3" />
+                    <input type="search" name="search3" placeholder="<?=lang('tel');?>" pattern="[0-9]+" required />
                 </td>
                 <td>
                     <input type="submit" name="search_tel" value="Пошук" />
@@ -156,7 +156,7 @@
 </div>
 
 <div class="tel">
-    <h2>Видалити</h2>
+    <h2><?=lang('del');?></h2>
     <form action="" method="post">
         <table>
             <tr>
@@ -164,7 +164,7 @@
                     По номеру у списку
                 </td>
                 <td>
-                    <input type="search" name="del" />
+                    <input type="search" name="del" placeholder="<?=lang('number_list');?>" pattern="[0-9]+" required />
                 </td>
                 <td>
                     <input type="submit" name="del_tel" value="Видалити контакт" />
@@ -181,8 +181,8 @@
                     По імені та прізвищу
                 </td>
                 <td width="150px">
-                    <input type="search" name="name" />
-                    <input type="search" name="surname" />
+                    <input type="search" name="name" placeholder="<?=lang('name');?>" pattern="[A-Za-zА-Яа-я]+" />
+                    <input type="search" name="surname" placeholder="<?=lang('surname');?>" pattern="[A-Za-zА-Яа-я]+" />
                 </td>
                 <td>
                     <input type="submit" name="del_tel_name" value="Видалити контакт" />
