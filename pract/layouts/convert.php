@@ -1,3 +1,72 @@
+<div class="category">
+    <h2><?=lang('convert');?></h2>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td width="250px">
+                    <?=lang('number');?>
+                </td>
+                <td>
+                    <input class="number" type="text" name="number" placeholder="<?=lang('number');?>" pattern="\d+(.\d{1,10})?" required />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div>
+                        <select name="category" id="category">
+                            <option value="0">Виберіть категорію</option>
+                            <?php
+                                $category = get_category();
+                                foreach($category as $item): 
+                            ?>
+
+                            <option value="<?=$item['id'];?>"><?=$item['category'];?></option>
+
+                            <?php
+                                endforeach;
+                            ?>
+                        </select>
+                    </div>
+                    <div id="divdemension">
+                        <select disabled="" name="demension" id="demension"></select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?=lang('convert_in');?>
+                </td>
+                <td>
+                    <div id="divdemension_in">
+                        <select disabled="" name="demension_in" id="demension_in"></select>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <input id="get_res" type="submit" value="<?=lang('get_result');?>" name="get_result" />
+    </form>
+    
+    <h2 id="res"></h2>
+    
+    <?php 
+        echo $result;
+    ?>
+    <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+    </pre>
+</div>
+<hr />
 
 <div class="category">
     <h2><?=lang('new_category');?></h2>
@@ -175,69 +244,3 @@
     <br />
 </div>
 
-<div class="category">
-    <a name="conv"></a>
-    <h2><?=lang('convert');?></h2>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td width="250px">
-                    <?=lang('number');?>
-                </td>
-                <td>
-                    <input type="text" name="number" placeholder="<?=lang('number');?>" pattern="\d+(.\d{1,10})?" required />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div>
-                        <select name="category" id="category">
-                            <option value="0">Виберіть категорію</option>
-                            <?php
-                                $category = get_category();
-                                foreach($category as $item): 
-                            ?>
-
-                            <option value="<?=$item['id'];?>"><?=$item['category'];?></option>
-
-                            <?php
-                                endforeach;
-                            ?>
-                        </select>
-                    </div>
-                    <div id="divdemension">
-                        <select disabled="" name="demension" id="demension"></select>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?=lang('convert_in');?>
-                </td>
-                <td>
-                    <div id="divdemension_in">
-                        <select disabled="" name="demension_in" id="demension_in"></select>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <input type="submit" value="<?=lang('get_result');?>" name="get_result" />
-    </form>
-    <?php 
-        echo $result;
-    ?>
-    <pre>
-
-
-
-
-
-
-
-
-
-
-
-
-    </pre>
-</div>

@@ -11,6 +11,7 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="function/select.js"></script>
+        <script src="function/res.js"></script>
         
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="keywords" />

@@ -10,3 +10,8 @@
 .category table tr td {
     border-bottom: 1px solid #fff;
 }
+
+a.convert {
+    display: inline-block;
+    margin-top: -350px;
+}

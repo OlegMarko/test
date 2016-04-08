@@ -318,5 +318,13 @@
         
         return $return;
     }
+    
+    function get_res() {
+        $connection = db_connect();
+        
+        $res = convert($_POST['number'], $_POST['demension'], $_POST['demension_in']);
+        $ret = "$res";
+        return $ret;
+    }
 
 ?>

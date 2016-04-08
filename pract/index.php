@@ -10,6 +10,10 @@
         exit($res);
     }
     
+    if (!empty($_POST['get_result']) && !isset($_POST['number']) && !isset($_POST['demension']) && !isset($_POST['demension_in'])) {
+        $get_r = get_res();
+    }
+    
     if (empty($_GET['page'])) {
         $page = 'index';
     } else {
@@ -89,6 +93,7 @@
                 $info = "Не всі поля заповнені! Заповніт всі поля!!!";
             }
             
+            
             if(isset($_POST['get_result'])  && !empty($_POST['number']) && !empty($_POST['demension']) && !empty($_POST['demension_in'])) {
                 $number = $_POST['number'];
                 $out = $_POST['demension'];
@@ -96,6 +101,8 @@
                 if ($out != $in) {
                     $result = "$number " . get_relationsID($out) . " = " . convert($number, $out, $in) . " " . get_relationsID($in);
                     $info = "";
+                    
+                    
                     
                     $f = fopen('log.txt', 'a+');
                     fwrite($f, $result ."  " . " Date this convert " . date("l dS of F Y h:I:s A") . "\n");
