@@ -3,7 +3,12 @@
     function db_connect() {
         /* Підключення до бази даних */
         
-        include 'function/config.php';
+        //include 'function/config.php';
+        
+        $host = "localhost";
+        $user = "root";
+        $password = "";
+        $database = "db_pract";
         
         $connection = new mysqli($host, $user, $password, $database);
         $connection->query(" SET NAMES 'utf8' ");
@@ -83,9 +88,9 @@
         
         return $result;
     }
-    
+    /*
     function get_relationsID($id) {
-        /* Вибірка відношень з бази даних */
+        // Вибірка відношень з бази даних 
         
         $connection = db_connect();
         
@@ -100,6 +105,7 @@
         
         return $result;
     }
+    */
     
     function get_relations_category($category) {
         /* Вибірка відношень однієї категорії з бази даних */
@@ -114,8 +120,10 @@
         return $result;
     }
     
+    /*
+    
     function get_number_CI($data) {
-        /* отриманя значення Сі */
+        // отриманя значення Сі
         
         $connection = db_connect();
         
@@ -131,6 +139,8 @@
         return $result;
     }
     
+    */
+    
     function update_category($id, $category) {
         
         $connection = db_connect();
@@ -138,6 +148,7 @@
         $query = "UPDATE `db_pract`.`convert_category` SET `category` = $category WHERE `convert_category`.`id` = $id;";
         $query = mysqli_query($connection, $query); 
     }
+    
     
     function update_demension($id, $number) {
         
@@ -317,14 +328,6 @@
         }
         
         return $return;
-    }
-    
-    function get_res() {
-        $connection = db_connect();
-        
-        $res = convert($_POST['number'], $_POST['demension'], $_POST['demension_in']);
-        $ret = "$res";
-        return $ret;
     }
 
 ?>

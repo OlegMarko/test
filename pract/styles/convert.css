@@ -15,3 +15,9 @@ a.convert {
     display: inline-block;
     margin-top: -350px;
 }
+
+#res {
+    margin: 0 auto;
+    color: #f00;
+    font-size: 250%;
+}

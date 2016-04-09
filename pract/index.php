@@ -1,7 +1,7 @@
 <?php
 
-    include 'function/db_func.php';
-    include 'function/convert.php';
+    require 'function/db_func.php';
+    //include 'function/convert.php';
     
     session_start();
     
@@ -10,9 +10,21 @@
         exit($res);
     }
     
-    if (!empty($_POST['get_result']) && !isset($_POST['number']) && !isset($_POST['demension']) && !isset($_POST['demension_in'])) {
-        $get_r = get_res();
+    /*
+    
+    if(!empty($_POST['get_res']) && !isset($_POST['number']) && !isset($_POST['demension']) && !isset($_POST['demension_in'])) {
+                
+        sleep(2);
+
+        // Правило конвертації 
+        $number = "'".($_POST['number'])."'";
+        $out = "'".($_POST['demension'])."'";
+        $in = "'".($_POST['demension_in'])."'";
+
+        $res = convert($number, $out, $in);
+        exit($res);
     }
+    */
     
     if (empty($_GET['page'])) {
         $page = 'index';
@@ -94,6 +106,8 @@
             }
             
             
+            
+            /*
             if(isset($_POST['get_result'])  && !empty($_POST['number']) && !empty($_POST['demension']) && !empty($_POST['demension_in'])) {
                 $number = $_POST['number'];
                 $out = $_POST['demension'];
@@ -116,7 +130,7 @@
                 $result = "";
                 $info = "";
             }
-            
+            */
         break;
         
         case "tel":

@@ -1,6 +1,5 @@
 <div class="category">
     <h2><?=lang('convert');?></h2>
-    <form action="" method="post">
         <table>
             <tr>
                 <td width="250px">
@@ -11,7 +10,10 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td>
+                    Конвертувати з: 
+                </td>
+                <td>
                     <div>
                         <select name="category" id="category">
                             <option value="0">Виберіть категорію</option>
@@ -43,13 +45,14 @@
                 </td>
             </tr>
         </table>
-        <input id="get_res" type="submit" value="<?=lang('get_result');?>" name="get_result" />
-    </form>
+  <!--  <input id="get_res" type="submit" value="<?=lang('get_result');?>" name="get_result" />
+  -->
+  <h3 id="load" style="cursor: pointer">Обчислити</h3>
     
-    <h2 id="res"></h2>
+    <h2 id="res">*</h2>
     
     <?php 
-        echo $result;
+        //echo $result;
     ?>
     <pre>
 
